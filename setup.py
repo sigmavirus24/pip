@@ -41,7 +41,8 @@ def find_version(*file_paths):
 long_description = "\n" + "\n".join([read('PROJECT.txt'),
                                      read('docs', 'quickstart.rst')])
 
-tests_require = ['pytest', 'virtualenv>=1.10', 'scripttest>=1.3', 'mock']
+tests_require = ['pytest', 'virtualenv>=1.10', 'scripttest>=1.3', 'mock',
+                 'betamax']
 
 setup(name="pip",
       version=find_version('pip', '__init__.py'),
