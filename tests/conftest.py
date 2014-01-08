@@ -1,5 +1,6 @@
 import shutil
 
+import betamax
 import py
 import pytest
 
@@ -89,3 +90,7 @@ def script(tmpdir, virtualenv):
 @pytest.fixture
 def data(tmpdir):
     return TestData.copy(tmpdir.join("data"))
+
+
+with betamax.Betamax.configure() as config:
+    config.cassette_library_dir = 'tests/cassettes'
